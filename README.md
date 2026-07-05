@@ -1,44 +1,55 @@
-<<<<<<< HEAD
-# Project-Manager
-=======
-# 🤖 AI-Powered Project Management Using AI Agents with Streamlit + Airtable
+# 🤖 AI-Powered Project Management with AI Agents
 
-This project is an AI-powered Project Management assistant built using **Streamlit**, integrated with **Airtable** for data storage. It leverages modular AI agents to generate tasks, allocate them, assess risks, and generate actionable insights.
+Ever wished you had a smart assistant that could take your project idea and instantly break it down into tasks, assign them to the right people, flag risks, and give you actionable insights — all in one go? That's exactly what this does.
+
+Built with **Streamlit** for the interface and **Airtable** as the backend, this tool uses a chain of AI agents that work together to take a project description from raw idea to a fully structured, allocated, and risk-assessed plan.
 
 ---
 
-## 🚀 Features
+## What it does
 
-- 📋 Upload a CSV file of team members and skills
-- 🤖 AI-based task generation from project description
-- 🧩 Task dependency detection and scheduling
-- 👥 Smart task allocation based on team member skills
-- ⚠️ Risk assessment and insight generation
-- 📊 Syncs all updates to **Airtable**
-- 🔄 Export final structured output as CSV
-- ✅ Integrated CI pipeline using GitHub Actions
+Here's what happens when you hit that submit button:
 
-## 📦 Installation
+- 📋 Reads your team's skills from a CSV you upload
+- 🤖 Generates a list of tasks from your project description
+- 🧩 Figures out which tasks depend on each other
+- 📅 Schedules tasks in the right order
+- 👥 Assigns each task to the best-fit team member
+- ⚠️ Spots potential risks before they become problems
+- 📊 Wraps it all up with insights you can actually use
+- 🔄 Saves everything to Airtable and lets you export a CSV
 
-### 1. Clone the repository
+---
+
+## Getting started
+
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/ManideepMuddagowni/Project-Manager-AI-Agents-Assistant.git
-cd ai-project-manager
+cd Project-Manager-AI-Agents-Assistant
 ```
 
-### 2. Create virtual environment and install dependencies
+### 2. Set up your environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # or `venv\Scripts\activate` on Windows
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # Mac/Linux
 
 pip install -r requirements.txt
 ```
 
----
+### 3. Add your API keys
 
-## 🧪 Run the App Locally
+Create a `.env` file in the root directory:
+
+```env
+AIRTABLE_API_KEY=your_airtable_api_key
+AIRTABLE_BASE_ID=your_airtable_base_id
+```
+
+### 4. Run it
 
 ```bash
 streamlit run app/main.py
@@ -46,35 +57,9 @@ streamlit run app/main.py
 
 ---
 
-## 📤 Airtable Setup
+## CSV format
 
-Add your Airtable API key and Base ID in a `.env` file:
-
-```env
-AIRTABLE_API_KEY=your_airtable_api_key
-AIRTABLE_BASE_ID=your_airtable_base_id
-```
-
-> Or add them as **secrets** in the Streamlit Cloud app dashboard.
-
-
----
-
-## 📊 Deployment
-
-### Option 1: **[Streamlit Community Cloud](https://streamlit.io/cloud)**
-
-- Connect your GitHub repo
-- Set `app/main.py` as the main script
-- Add required secrets via the dashboard
-
-### Option 2: Self-hosted / Docker (optional)
-
-*Coming soon – Dockerfile support.*
-
----
-
-## ✅ Sample CSV Format
+Your team CSV should look like this:
 
 ```csv
 Name,Profile Description
@@ -82,18 +67,4 @@ Alice,Python, ML, AI
 Bob,Project Management, Scrum
 ```
 
----
-
-## 🙌 Acknowledgements
-
-- [Streamlit](https://streamlit.io/)
-- [Airtable](https://airtable.com/)
-- [LangChain Agents / LLMs]
-- [OpenAI / Groq (used)]
-
----
-
-## 📄 License
-
-MIT License – feel free to fork and customize.
->>>>>>> b7f7a5d (readme)
+Keep it simple — just names and skills. The agents handle the rest.
