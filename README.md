@@ -21,42 +21,6 @@ Here's what happens when you hit that submit button:
 
 ---
 
-## Getting started
-
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/ManideepMuddagowni/Project-Manager-AI-Agents-Assistant.git
-cd Project-Manager-AI-Agents-Assistant
-```
-
-### 2. Set up your environment
-
-```bash
-python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # Mac/Linux
-
-pip install -r requirements.txt
-```
-
-### 3. Add your API keys
-
-Create a `.env` file in the root directory:
-
-```env
-AIRTABLE_API_KEY=your_airtable_api_key
-AIRTABLE_BASE_ID=your_airtable_base_id
-```
-
-### 4. Run it
-
-```bash
-streamlit run app/main.py
-```
-
----
-
 ## CSV format
 
 Your team CSV should look like this:
